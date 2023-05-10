@@ -33,15 +33,15 @@ def process_one_image(args, img_path, detector, pose_estimator, visualizer,
     bboxes = np.concatenate(
         (pred_instance.bboxes, pred_instance.scores[:, None]), axis=1)
     bboxes = bboxes[np.logical_and(pred_instance.labels == args.det_cat_id,
-                                   pred_instance.scores > args.bbox_thr + 0.5)]
+                                   pred_instance.scores > args.bbox_thr + 0.3)]
     bboxes = bboxes[nms(bboxes, args.nms_thr), :4]
     
-    i = len(bboxes[0])
-    aux = bboxes
+    #i = len(bboxes[0])
+    #aux = bboxes
     
-    for columna in range(0, i+1):
-        if aux[columna][0] < 246 or aux[columna][1] > 1650:
-            bboxes = np.delete(bboxes, columna, 0)
+    #for columna in range(0, i+1):
+    #    if aux[columna][0] < 246 or aux[columna][1] > 1650:
+    #        bboxes = np.delete(bboxes, columna, 0)
 
     # predict keypoints
     pose_results = inference_topdown(pose_estimator, img_path, bboxes)
