@@ -39,6 +39,8 @@ class NDStandardScaler(TransformerMixin):
         return X
     
     def inverse_transform(self, X, **kwargs):
-        X = self._reshape(X)
+        X = np.array(X)
+        X = self._flatten(X)
         X = self._scaler.inverse_transform(X, **kwargs)
+        X = self._reshape(X)
         return X
