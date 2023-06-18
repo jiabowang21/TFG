@@ -2,6 +2,13 @@ import cv2
 import os
 
 def extractFrames(input_path, output_path):
+    """"
+    Input:
+        - input_path:  ubicación en donde se encuentra el vídeo a fragmentar
+        - output_path: ubicación en donde se guardan el conjunto de fotogramas extraídos
+    
+    Extraer el conjunto de fotogramas de un vídeo 
+    """
     if not os.path.exists(output_path):
         # If it doesn't exist, create it
         os.makedirs(output_path)
@@ -20,5 +27,3 @@ def extractFrames(input_path, output_path):
             break
     video.release()
     cv2.destroyAllWindows()
-    
-    #extractFrames("/Users/jiabowang/Desktop/TFG/mmpose/inputs/padel.mp4", "/Users/jiabowang/Desktop/TFG/mmpose/outputs")

@@ -2,6 +2,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def training(epochs, model, trainloader, validloader, optimizer, loss_fn):
+    """"
+    Input:
+        - epochs:      numero de epocas a entrenar
+        - modelo:      modelo a entrenar
+        - trainloader: conjunto de datos de entrenamiento
+        - validloader: conjunto de datos de validación
+        - optimizer:   optimizador
+        - loss_fn:     función de error
+    
+    Entrenamiento del modelo según los parámetros especificados
+    """
     loss_training = []
     loss_testing = []
     for e in range(epochs):

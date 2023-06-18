@@ -23,7 +23,7 @@ def inferencia(mot_config, input_video, output):
     top_left_x = 140.
     top_left_y = 100.
     
-    bottom_right_x = 1740.
+    bottom_right_x = 1700.
     bottom_right_y = 930.
     
     track = dict()

@@ -78,6 +78,17 @@ def tratamiento_datos(X, y, hip):
     return X, y
 
 def cambiar_input_frames(X_aux, y_aux, frames, offset):
+    """"
+    Input:
+        - X_aux: lista que contiene las coordenadas de los keypoints de todos los frames
+        - y_aux: lista que contiene las coordenadas del ground truth de todos los frames
+        - frames: tamaño de la secuencia 
+        - offset: cada cuantos fotogramas coger dentro de una secuencia
+    Output:
+        - X: lista X_aux con numeros de fotogramas indicado por frames y offset
+        - y: lista y_aux con numeros de fotogramas indicado por frames y offset
+    Se cambia el tamaño de las listas segun frames y offset
+    """
     X = []
     y = []
     secuencia = int((offset/2)*frames)
