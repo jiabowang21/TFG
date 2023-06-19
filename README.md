@@ -42,5 +42,22 @@ Para usar el modelo de seguimiento:
 
 Hay una incompatibilidad entre el modelo de detección y el modelo de seguimiento, que queda pendiente de solucionar.
 
-
- 
+## Citations
+MMPose:
+```bibtex
+@misc{mmpose2020,
+    title={OpenMMLab Pose Estimation Toolbox and Benchmark},
+    author={MMPose Contributors},
+    howpublished = {\url{https://github.com/open-mmlab/mmpose}},
+    year={2020}
+}
+```
+MMTracking:
+```bibtex
+@misc{mmtrack2020,
+    title={{MMTracking: OpenMMLab} video perception toolbox and benchmark},
+    author={MMTracking Contributors},
+    howpublished = {\url{https://github.com/open-mmlab/mmtracking}},
+    year={2020}
+}
+```
